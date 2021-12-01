@@ -30,15 +30,19 @@ export default function Controls({
 
             <label>
                 TORSO
-                <select value={torso}>
-                    
+                <select value={torso} onChange={(event) => onTorsoChange(event.target.value)}>
+                    {torsoPix.map((picture) => (
+                        <option key={picture}>{picture}</option>
+                    ))}
                 </select>
             </label>
 
             <label>
                 LEGS
-                <select value={legs}>
-                    
+                <select value={legs} onChange={(event) => onLegsChange(event.target.value)}>
+                    {legsPix.map((picture) => (
+                        <option key={picture}>{picture}</option>
+                    ))}
                 </select>
             </label>
         </div>
