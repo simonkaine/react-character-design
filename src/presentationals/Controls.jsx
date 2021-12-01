@@ -48,13 +48,14 @@ export default function Controls({
             </label>
 
             <label>
-                New catchphrase:
+                New Catchphrase:
                 <input value={newPhrase} onChange={(event) => setCatchphrase(event.target.value)} />
             </label>
         
             <button type='button' onClick={handleClick}>Add it!</button>
 
         </div> 
+
     ); 
 }
 
