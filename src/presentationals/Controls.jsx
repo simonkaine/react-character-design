@@ -54,7 +54,7 @@ export default function Controls({
         
             <button type='button' onClick={handleClick}>Add it!</button>
 
-        </div>
-    );
+        </div> 
+    ); 
 }
 
