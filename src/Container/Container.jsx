@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import Controls from '../presentationals/Controls';
+import Display from '../presentationals/Display';
 
 export default function Container() {
 
@@ -31,6 +32,7 @@ export default function Container() {
                         setCatchphrase={setNewPhrase}
                         handleClick={handleClick}
                     />
+                    <Display catchphrases={catchphrases}/>
                 </header>
                 </main>
             </div>
