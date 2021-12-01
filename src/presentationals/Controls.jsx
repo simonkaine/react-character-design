@@ -8,7 +8,7 @@ export default function Controls({
     legs,
     onLegsChange,
     newPhrase,
-    setcatchphrase,
+    setCatchphrase,
     handleClick
 }) {
     // deconstruct pictures for mapping
@@ -17,6 +17,7 @@ export default function Controls({
     const legsPix = ['bird', 'robot', 'chicken', 'cartoon'];
 
     // Per onChange event, Map thru pictures
+    // input for catchphrase + button to add to array
     return (
         <div>
             <label>
@@ -45,6 +46,14 @@ export default function Controls({
                     ))}
                 </select>
             </label>
+
+            <label>
+                New catchphrase:
+                <input value={newPhrase} onChange={(event) => setCatchphrase(event.target.value)} />
+            </label>
+        
+            <button type='button' onClick={handleClick}>Add it!</button>
+
         </div>
     );
 }
