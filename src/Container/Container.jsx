@@ -1,33 +1,40 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { useState } from 'react'
+import Controls from '../presentationals/Controls';
 
-
-export default class Container extends Component {
+export default function Container() {
 
   const [head, setHead] = useState('dragon');
   const [torso, setTorso] = useState('cena');
   const [legs, setLegs] = useState('bird');
+  const [newPhrase, setNewPhrase] = useState('');
   const [catchphrases, setCatchphrases] = useState([]);
-  const [newCatchphrase, setNewCatchphrase] = useState('');
 
-    render() {
+  const handleClick = () => {
+      setCatchphrases((previousSate) => [...previousSate, newPhrase]);
+  }
         // presentational components below! 
         return (
-        <div>
-            <select>
-
-            </select>
-
-            <select>
-
-            </select>
-
-            <select>
-
-            </select>
-        </div>
-            
+            <div className='Container'>
+                <main>
+                <header>
+                    <h1>Character Design</h1>
+                    <h2>Pick out your character!</h2>
+                    <Controls 
+                        head={head}
+                        onHeadChange={setHead}
+                        torso={torso}
+                        onTorsoChange={setTorso}
+                        legs={legs}
+                        onLegsChange={setLegs}
+                        newPhrase={newPhrase}
+                        setCatchphrase={setNewPhrase}
+                        handleClick={handleClick}
+                    />
+                </header>
+                </main>
+            </div>
         )
-    }
+
 }
 
