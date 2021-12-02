@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Controls from '../presentationals/Controls';
 import Display from '../presentationals/Display';
+import Character from '../presentationals/Character';
 
 export default function Container() {
 
@@ -16,9 +17,9 @@ export default function Container() {
   }
         // presentational components below! 
         return (
-            <div className='Container'>
-                <main>
-                <header>
+            <div className='Container' >
+                <main >
+                <header style={{backgroundColor: 'black', color: 'white'}}>
                     <h1>Character Design</h1>
                     <h2>Pick out your character!</h2>
                     <Controls 
@@ -32,7 +33,8 @@ export default function Container() {
                         setCatchphrase={setNewPhrase}
                         handleClick={handleClick}
                     />
-                    <Display catchphrases={catchphrases}/>
+                    <Display catchphrases={catchphrases} />
+                    <Character head={head} torso={torso} legs={legs}/>
                 </header>
                 </main>
             </div>

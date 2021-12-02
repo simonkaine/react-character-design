@@ -4,7 +4,7 @@ export default function Display({catchphrases}) {
     return (
         <div>
             {catchphrases.map((phrase) => (
-                <p key={phrase}>{phrase}</p>
+                <p key={phrase} style={{marginLeft: 50}}>{phrase}</p>
             ))}
         </div>
     )
