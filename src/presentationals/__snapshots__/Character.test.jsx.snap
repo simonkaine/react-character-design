@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should display the Character from initial load 1`] = `
+<div>
+  <section
+    style="background-color: black; display: flex; flex-direction: column;"
+  >
+    <article
+      aria-label="head"
+      style="background-image: url(./dragon-head.png); margin: 0px auto; height: 300px; width: 300px; background-size: cover; background-repeat: no-repeat;"
+    />
+    <article
+      aria-label="torso"
+      style="background-image: url(./cena-torso.png); margin: 0px auto; height: 300px; width: 300px; background-size: cover; background-repeat: no-repeat;"
+    />
+    <article
+      aria-label="legs"
+      style="background-image: url(./bird-legs.png); margin: 0px auto; height: 300px; width: 300px; background-size: cover; background-repeat: no-repeat;"
+    />
+  </section>
+</div>
+`;
